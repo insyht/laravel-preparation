@@ -1,10 +1,44 @@
 # Frontend
-## Blade Templating
-### Official documentation
-https://laravel.com/docs/6.x/blade
-## Localization
-### Official documentation
-https://laravel.com/docs/6.x/localization
-## Asset Compilation
-### Official documentation
-https://laravel.com/docs/6.x/mix
+- Blade (https://laravel.com/docs/6.x/blade)
+    - Layouts, sections, yield (https://laravel.com/docs/6.x/blade#defining-a-layout, https://laravel.com/docs/6.x/blade#extending-a-layout)
+    - Components, slots (https://laravel.com/docs/6.x/blade#components-and-slots)
+    - Variabelen (https://laravel.com/docs/6.x/blade#displaying-data)
+    - Een {{ }} escapen (https://laravel.com/docs/6.x/blade#blade-and-javascript-frameworks)
+    - Control structures (if, while etc.) (https://laravel.com/docs/6.x/blade#control-structures)
+        - If (https://laravel.com/docs/6.x/blade#if-statements)
+        - Switch (https://laravel.com/docs/6.x/blade#switch-statements)
+        - Loops (for, foreach, forelse, while) (https://laravel.com/docs/6.x/blade#loops, https://laravel.com/docs/6.x/blade#the-loop-variable)
+    - Comments (https://laravel.com/docs/6.x/blade#comments)
+    - Rauwe php (https://laravel.com/docs/6.x/blade#php)
+    - Forms (https://laravel.com/docs/6.x/blade#forms)
+        - CSRF token (https://laravel.com/docs/6.x/blade#csrf-field)
+        - Methodveld (https://laravel.com/docs/6.x/blade#method-field)
+        - Validatiemeldingen (https://laravel.com/docs/6.x/blade#validation-errors)
+    - Andere view includen (https://laravel.com/docs/6.x/blade#including-subviews)
+    - Views includen voor collections, bijvoorbeeld voor een overzichtspagina (https://laravel.com/docs/6.x/blade#rendering-views-for-collections)
+    - Geef een stukje code/html door aan andere views door em aan een stack toe te voegen, bijvoorbeeld extra JS aan de head view (https://laravel.com/docs/6.x/blade#stacks)
+    - Een service class inladen (https://laravel.com/docs/6.x/blade#service-injection)
+    - Custom functionaliteit toevoegen aan Blade (https://laravel.com/docs/6.x/blade#extending-blade, https://laravel.com/docs/6.x/blade#custom-if-statements)
+- Localization (https://laravel.com/docs/6.x/localization)
+    - Lokatie van localization bestanden (https://laravel.com/docs/6.x/localization#introduction)
+    - Een locale instellen (https://laravel.com/docs/6.x/localization#configuring-the-locale)
+    - Format van vertaalbestanden (https://laravel.com/docs/6.x/localization#using-short-keys, https://laravel.com/docs/6.x/localization#using-translation-strings-as-keys)
+    - Vertaling ophalen (https://laravel.com/docs/6.x/localization#retrieving-translation-strings)
+    - Vertalingen met parameters (https://laravel.com/docs/6.x/localization#replacing-parameters-in-translation-strings)
+    - Meervoudsvormen in vertalingen (https://laravel.com/docs/6.x/localization#pluralization)
+    - Vertalingen (deels) overschrijven (https://laravel.com/docs/6.x/localization#overriding-package-language-files)
+- Asset compilation (Laravel Mix) (https://laravel.com/docs/6.x/mix)
+    - Installatie en instellen (https://laravel.com/docs/6.x/mix#installation)
+    - Compileren (https://laravel.com/docs/6.x/mix#running-mix)
+        - Stylesheets (https://laravel.com/docs/6.x/mix#working-with-stylesheets)
+            - SASS (https://laravel.com/docs/6.x/mix#sass)
+            - CSS (https://laravel.com/docs/6.x/mix#plain-css)
+            - URL verwerking (https://laravel.com/docs/6.x/mix#url-processing)
+            - Source maps toevoegen (https://laravel.com/docs/6.x/mix#css-source-maps)
+        - Javascript (https://laravel.com/docs/6.x/mix#working-with-scripts)
+            - Afsplitsen van JS die niet van jou is (bijvoorbeeld vendor) (https://laravel.com/docs/6.x/mix#vendor-extraction)
+            - Vanilla JS (https://laravel.com/docs/6.x/mix#vanilla-js)
+    - Kopiëren van bestanden en mappen (https://laravel.com/docs/6.x/mix#copying-files-and-directories)
+    - Versioning, waarmee je dus de browser alleen een JS opnieuw laat inladen als deze anders heet (https://laravel.com/docs/6.x/mix#versioning-and-cache-busting)
+    - Gelijk in de browser gecompileerde code herladen als deze aangepast is (https://laravel.com/docs/6.x/mix#browsersync-reloading)
+    - Environment variabelen (https://laravel.com/docs/6.x/mix#environment-variables)

@@ -1,19 +1,14 @@
 # Task Scheduling
-## Scheduling Artisan Commands
-### Official documentation
-https://laravel.com/docs/6.x/scheduling#scheduling-artisan-commands
-## Scheduling Queue Jobs
-### Official documentation
-https://laravel.com/docs/6.x/scheduling#scheduling-queued-jobs
-## Scheduling Shell Commands
-### Official documentation
-https://laravel.com/docs/6.x/scheduling#scheduling-shell-commands
-## Time Zones
-### Official documentation
-https://laravel.com/docs/6.x/scheduling#timezones
-## Preventing Task Overlaps
-### Official documentation
-https://laravel.com/docs/6.x/scheduling#preventing-task-overlaps
-## Maintenance Mode
-### Official documentation
-https://laravel.com/docs/6.x/scheduling#maintenance-mode
+- De Laravel Scheduler toevoegen aan cron (https://laravel.com/docs/6.x/scheduling#introduction)
+- Een standaard schedule aanmaken (https://laravel.com/docs/6.x/scheduling#defining-schedules)
+- Een Artisan commando schedulen (https://laravel.com/docs/6.x/scheduling#scheduling-artisan-commands)
+- Een "plaats deze job in de queue" schedule maken (https://laravel.com/docs/6.x/scheduling#scheduling-queued-jobs)
+- Een shell commando schedulen (https://laravel.com/docs/6.x/scheduling#scheduling-shell-commands)
+- De frequentiemogelijkheden (https://laravel.com/docs/6.x/scheduling#schedule-frequency-options)
+- De timezone meegeven / als default instellen voor (een) schedule(s) (https://laravel.com/docs/6.x/scheduling#timezones)
+- Voorkomen dat 2 dezelfde taken gaan overlappen (dat de volgende begint terwijl de vorige nog niet klaar is) (https://laravel.com/docs/6.x/scheduling#preventing-task-overlaps)
+- Locks gebruiken als je meerdere servers gebruikt met elk een scheduler (https://laravel.com/docs/6.x/scheduling#running-tasks-on-one-server)	
+- Een schedule op de achtergrond draaien (zodat andere tasks niet hoeven te wachten) (kan alleen bij Artisan of shell commandos) (https://laravel.com/docs/6.x/scheduling#background-tasks)
+- Forceer een schedule tijdens maintenance mode (https://laravel.com/docs/6.x/scheduling#maintenance-mode)
+- De output van een schedule verwerken (kan alleen bij Artisan of shell commandos) (https://laravel.com/docs/6.x/scheduling#task-output)
+- Hooks bij een schedule (voor/na/succes/faal/url webhook) (https://laravel.com/docs/6.x/scheduling#task-hooks)

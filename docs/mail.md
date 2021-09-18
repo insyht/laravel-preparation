@@ -1,18 +1,14 @@
 # Mail
-## Drivers / Configuration
-### Official documentation
-https://laravel.com/docs/6.x/mail#driver-prerequisites
-## Generating Mailables
-### Official documentation
-https://laravel.com/docs/6.x/mail#generating-mailables
-## Writing Mail
-
-## Sending Mail
-### Official documentation
-https://laravel.com/docs/6.x/mail#sending-mail
-## Markdown
-### Official documentation
-https://laravel.com/docs/6.x/mail#markdown-mailables
-## Local Development
-### Official documentation
-https://laravel.com/docs/6.x/mail#mail-and-local-development
+- Een mailable (= een class waarmee je een specifiek mail object kan maken, bijv OrderShippedMail) genereren (https://laravel.com/docs/6.x/mail#generating-mailables)
+    - De afzender instellen (https://laravel.com/docs/6.x/mail#configuring-the-sender)
+    - De body instellen (https://laravel.com/docs/6.x/mail#configuring-the-view)
+        - Data doorgeven aan de view/body (https://laravel.com/docs/6.x/mail#view-data)
+        - Inline bijlages (bijv afbeeldingen) toevoegen (https://laravel.com/docs/6.x/mail#inline-attachments)
+    - Bijlages instellen (https://laravel.com/docs/6.x/mail#attachments)
+- Een markdown mailable maken (https://laravel.com/docs/6.x/mail#markdown-mailables)
+- Een mail versturen (https://laravel.com/docs/6.x/mail#sending-mail)
+- De HTML van een mailable capturen zonder deze te verzenden (bijvoorbeeld om te previewen) (https://laravel.com/docs/6.x/mail#rendering-mailables)
+- Een mailtje queuen (https://laravel.com/docs/6.x/mail#queueing-mail)
+- Een locale instellen voor een mailable (https://laravel.com/docs/6.x/mail#localizing-mailables)
+- Een mail niet écht versturen maar bijv loggen (https://laravel.com/docs/6.x/mail#mail-and-local-development)
+- Event afvangen voor of na het versturen (https://laravel.com/docs/6.x/mail#events)

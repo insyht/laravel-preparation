@@ -1,15 +1,52 @@
 # Security
-## Authentication
-### Official documentation
-https://laravel.com/docs/6.x/authentication
-## Authorization
-### Official documentation
-https://laravel.com/docs/6.x/authorization
-## Encryption / Hashing
-### Official documentation
-https://laravel.com/docs/6.x/encryption
-https://laravel.com/docs/6.x/hashing
-## CSRF Protection
-### Official documentation
-https://laravel.com/docs/6.x/csrf
-## XSS Protection
+- Authenticatie (wie je bent) (https://laravel.com/docs/6.x/authentication)
+    - De basis van het systeem snel opzetten (https://laravel.com/docs/6.x/authentication#introduction, https://laravel.com/docs/6.x/authentication#included-routing)
+    - De default customizen
+        - Instellen naar welke url een gebruiker moet gaan nadat hij ingelogd is (https://laravel.com/docs/6.x/authentication#included-authenticating)
+        - Instellen welk veld gebruikt moet worden als gebruikersnaam (standaard is dat het emailveld) (https://laravel.com/docs/6.x/authentication#included-authenticating)
+        - Instellen welke guard (=de class die de authenticatie en registratie afhandelt) gebruikt moet worden (https://laravel.com/docs/6.x/authentication#included-authenticating)
+        - Validatie / opslag van gebruikers aanpassen (https://laravel.com/docs/6.x/authentication#included-authenticating)
+    - De ingelogde gebruiker opvragen (https://laravel.com/docs/6.x/authentication#retrieving-the-authenticated-user)
+    - Checken of de bezoeker is ingelogd (https://laravel.com/docs/6.x/authentication#retrieving-the-authenticated-user)
+    - Een route afschermen voor niet-ingelogde bezoekers (https://laravel.com/docs/6.x/authentication#protecting-routes)
+    - Een niet-ingelogde bezoeker naar een zelfgekozen route redirecten (standaard gaat ie naar de login route) (https://laravel.com/docs/6.x/authentication#protecting-routes)
+    - Een ingelogde bezoeker nogmaals om zijn/haar wachtwoord vragen (https://laravel.com/docs/6.x/authentication#password-confirmation)
+    - Basic Auth gebruiken (https://laravel.com/docs/6.x/authentication#http-basic-authentication)
+        - Eenmalig, zonder cookie, bijvoorbeeld voor een API (https://laravel.com/docs/6.x/authentication#stateless-http-basic-authentication)
+    - Uitloggen (https://laravel.com/docs/6.x/authentication#logging-out)
+    - Uitloggen op alle apparaten behalve de huidige (https://laravel.com/docs/6.x/authentication#invalidating-sessions-on-other-devices)
+    - Zelf een guard bouwen (https://laravel.com/docs/6.x/authentication#adding-custom-guards)
+    - Een close als guard gebruiken (https://laravel.com/docs/6.x/authentication#closure-request-guards)
+    - Event afvangen wanneer iemand zich geregistreerd heeft, probeert in te loggen, ingelogd is, succesvol is ingelogd, faalde in te loggen, uitgelogd is, teveel pogingen heeft gedaan om in te loggen, zijn wachtwoord reset (https://laravel.com/docs/6.x/authentication#events)
+- Authorisatie (wat je mag) (https://laravel.com/docs/6.x/authorization)
+    - Toegang (gates), een soort uitsmijter. Dit plaats je dus op bepaalde plekken in je code om te gaan bepalen of iets wel of niet mag (https://laravel.com/docs/6.x/authorization#gates)
+        - Maken (https://laravel.com/docs/6.x/authorization#writing-gates)
+        - Controleren of een gebruiker iets mag (https://laravel.com/docs/6.x/authorization#authorizing-actions-via-gates)
+        - Een bericht retourneren als iemand wel of niet toestemming heeft (https://laravel.com/docs/6.x/authorization#authorizing-actions-via-gates)
+        - Alle gates overrulen op een bepaalde plek (https://laravel.com/docs/6.x/authorization#intercepting-gate-checks)
+    - Rechten (policies), een soort kroegreglement. Deze worden gebruikt door de gates om te bepalen of iemand iets mag (https://laravel.com/docs/6.x/authorization#creating-policies)
+        - Genereren (https://laravel.com/docs/6.x/authorization#generating-policies)
+        - Registreren (https://laravel.com/docs/6.x/authorization#registering-policies)
+        - Schrijven (https://laravel.com/docs/6.x/authorization#writing-policies)
+            - De methods die de rechten bepalen voor een bepaalde actie (https://laravel.com/docs/6.x/authorization#policy-methods)
+            - Uitgebreide returns geven in de policy methods (https://laravel.com/docs/6.x/authorization#policy-responses)
+            - Bepalen hoe om te gaan met een niet-ingelogde bezoeker (https://laravel.com/docs/6.x/authorization#guest-users)
+        - Een policy overrulen op een bepaalde plek, bijvoorbeeld wanneer de gebruiker een superadmin is (https://laravel.com/docs/6.x/authorization#policy-filters)
+        - Policies toepassen via een user object (https://laravel.com/docs/6.x/authorization#via-the-user-model)
+        - Policies toepassen via middleware (https://laravel.com/docs/6.x/authorization#via-middleware)
+        - Policies toepassen via controller helpers (https://laravel.com/docs/6.x/authorization#via-controller-helpers)
+        - Policies toepassen in een Blade template (https://laravel.com/docs/6.x/authorization#via-blade-templates)
+        - Extra data meegeven aan een policy method (https://laravel.com/docs/6.x/authorization#supplying-additional-context)
+- Encryptie (https://laravel.com/docs/6.x/encryption)
+    - Configuratie (https://laravel.com/docs/6.x/encryption#configuration)
+    - Iets encrypten (https://laravel.com/docs/6.x/encryption#using-the-encrypter)
+    - Iets decrypten (https://laravel.com/docs/6.x/encryption#using-the-encrypter)
+- Hashen (https://laravel.com/docs/6.x/hashing)
+    - Configuratie (https://laravel.com/docs/6.x/hashing#configuration)
+    - Iets hashen (https://laravel.com/docs/6.x/hashing#basic-usage)
+    - Iets checken tegen een hash (https://laravel.com/docs/6.x/hashing#basic-usage)
+- CSRF (cross-site request forgery) (https://laravel.com/docs/6.x/csrf)
+    - Een CSRF token invoegen in een Blade template (https://laravel.com/docs/6.x/csrf#csrf-introduction)
+    - Een CSRF token valideren met middleware (https://laravel.com/docs/6.x/csrf#csrf-introduction)
+    - Bepaalde URIs excluden van CSRF token validaties (https://laravel.com/docs/6.x/csrf#csrf-excluding-uris)
+    - CSRF tokens gebruiken in AJAX requests (https://laravel.com/docs/6.x/csrf#csrf-x-csrf-token)

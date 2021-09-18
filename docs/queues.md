@@ -1,17 +1,28 @@
 # Queues
-## Drivers / Configurations
-### Official documentation
-https://laravel.com/docs/6.x/queues#driver-prerequisites
-## Creating / Dispatching Jobs
-### Official documentation
-https://laravel.com/docs/6.x/queues#creating-jobs
-https://laravel.com/docs/6.x/queues#dispatching-jobs
-## Running Queue Workers
-### Official documentation
-https://laravel.com/docs/6.x/queues#running-the-queue-worker
-## Supervisor
-### Official documentation
-https://laravel.com/docs/6.x/queues#supervisor-configuration
-## Handling Failed Jobs
-### Official documentation
-https://laravel.com/docs/6.x/queues#dealing-with-failed-jobs
+- Benodigdheden (https://laravel.com/docs/6.x/queues#driver-prerequisites)
+- Een job maken (https://laravel.com/docs/6.x/queues#generating-job-classes, https://laravel.com/docs/6.x/queues#class-structure)
+- Middleware om een job heen bouwen om een job qua code simpel te houden (https://laravel.com/docs/6.x/queues#job-middleware)
+- Een job op een queue plaatsen (https://laravel.com/docs/6.x/queues#dispatching-jobs)
+- Een job synchroon uitvoeren (dus zonder em op een queue te plaatsen) (https://laravel.com/docs/6.x/queues#synchronous-dispatching)
+- Meerdere jobs chainen bij het op een queue plaatsen (https://laravel.com/docs/6.x/queues#job-chaining)
+- Een job op een specifieke queue plaatsen (https://laravel.com/docs/6.x/queues#customizing-the-queue-and-connection)
+- Een job op een specifieke driver/connection plaatsen (https://laravel.com/docs/6.x/queues#customizing-the-queue-and-connection)
+- Een maximaal aantal pogingen/timeout instellen voor een job/queue (https://laravel.com/docs/6.x/queues#max-job-attempts-and-timeout)
+- Rate limiting instellen (alleen bij Redis) (https://laravel.com/docs/6.x/queues#rate-limiting)
+- Zorgen dat een bepaalde job maar door 1 worker tegelijk opgepakt mag worden, bijvoorbeeld vanwege locks (https://laravel.com/docs/6.x/queues#rate-limiting)
+- Een closure op een queue plaatsen (https://laravel.com/docs/6.x/queues#queueing-closures)
+- Een queue worker draaien (https://laravel.com/docs/6.x/queues#running-the-queue-worker)
+- Queue prioriteit instellen (https://laravel.com/docs/6.x/queues#queue-priorities)
+- Alle queues opnieuw opstarten (https://laravel.com/docs/6.x/queues#queue-workers-and-deployment)
+- Instellen hoe lang een job mag duren voor hij opnieuw op een queue geplaatst wordt (https://laravel.com/docs/6.x/queues#job-expirations-and-timeouts)
+- Instellen hoe lang een worker over een job mag doen voor ie gekilled wordt (https://laravel.com/docs/6.x/queues#job-expirations-and-timeouts)
+- Instellen hoe lang een worker moet wachten tot ie weer op nieuwe jobs checkt als ie op dat moment geen jobs meer heeft (https://laravel.com/docs/6.x/queues#job-expirations-and-timeouts)
+- Supervisor (process monitor) installeren en configureren in Ubuntu (https://laravel.com/docs/6.x/queues#supervisor-configuration)
+- Gefaalde jobs loggen (https://laravel.com/docs/6.x/queues#dealing-with-failed-jobs)
+- Clean up doen voor gefaalde jobs (https://laravel.com/docs/6.x/queues#cleaning-up-after-failed-jobs)
+- Event triggeren wanneer een van de jobs gefaald heeft (https://laravel.com/docs/6.x/queues#failed-job-events)
+- Een lijst van gefaalde jobs opvragen op de CLI (https://laravel.com/docs/6.x/queues#retrying-failed-jobs)
+- Een of meer gefaalde jobs opnieuw proberen via de CLI (https://laravel.com/docs/6.x/queues#retrying-failed-jobs)
+- Een of meer gefaalde jobs verwijderen (https://laravel.com/docs/6.x/queues#retrying-failed-jobs)
+- De fout negeren waarbij een job gedraaid wordt waarvan de model niet meer bestaat (https://laravel.com/docs/6.x/queues#ignoring-missing-models)
+- Event afvangen wanneer een van de jobs opgepakt gaat worden of zojuist afgerond is (https://laravel.com/docs/6.x/queues#job-events)

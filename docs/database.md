@@ -1,13 +1,66 @@
 # Database
-## Query Builder
-### Official documentation
-https://laravel.com/docs/6.x/queries
-## Pagination
-### Official documentation
-https://laravel.com/docs/6.x/pagination
-## Migrations
-### Official documentation
-https://laravel.com/docs/6.x/migrations
-## Seeding
-### Official documentation
-https://laravel.com/docs/6.x/seeding
+- Functies van de query builder om te gebruiken (https://laravel.com/docs/6.x/queries#retrieving-results):
+    - Data ophalen:
+        - get() (https://laravel.com/docs/6.x/queries#retrieving-results)
+        - where() (https://laravel.com/docs/6.x/queries#retrieving-results, https://laravel.com/docs/6.x/queries#where-clauses)
+            - geavanceerde where clauses (https://laravel.com/docs/6.x/queries#parameter-grouping)
+            - json columns (https://laravel.com/docs/6.x/queries#json-where-clauses)
+        - first() (https://laravel.com/docs/6.x/queries#retrieving-results)
+        - value() (https://laravel.com/docs/6.x/queries#retrieving-results)
+        - find() (https://laravel.com/docs/6.x/queries#retrieving-results)
+        - pluck() (https://laravel.com/docs/6.x/queries#retrieving-results)
+        - chunk(), chunkById() (https://laravel.com/docs/6.x/queries#chunking-results)
+        - exists(), doesntExist() (https://laravel.com/docs/6.x/queries#aggregates)
+        - Aggregates (https://laravel.com/docs/6.x/queries#aggregates)
+            - count()
+            - max()
+            - min()
+            - avg()
+            - sum()
+        - select(), addSelect() (https://laravel.com/docs/6.x/queries#selects)
+        - raw(), selectRaw(), whereRaw(), orWhereRaw(), havingRaw(), orHavingRaw(), orderByRaw(), groupByRaw() (https://laravel.com/docs/6.x/queries#raw-expressions)
+        - join(), leftJoin(), rightJoin(), crossJoin() (https://laravel.com/docs/6.x/queries#joins)
+        - Ingewikkelde join (https://laravel.com/docs/6.x/queries#joins)
+        - union(), unionAll() (https://laravel.com/docs/6.x/queries#unions)
+        - orderBy(), latest(), oldest(), inRandomOrder() (https://laravel.com/docs/6.x/queries#ordering-grouping-limit-and-offset)
+        - groupBy(), having() (https://laravel.com/docs/6.x/queries#ordering-grouping-limit-and-offset)
+        - take() / limit(), skip() / offset() (https://laravel.com/docs/6.x/queries#ordering-grouping-limit-and-offset)
+        - conditionele query delen (bijvoorbeeld sorteren op specifieke kolom als dit is gekozen door de bezoeker) (https://laravel.com/docs/6.x/queries#conditional-clauses)
+        - pagineren van de resultaten (https://laravel.com/docs/6.x/pagination#paginating-query-builder-results)
+    - Data opslaan:
+        - insert(), insertOrIgnore() (https://laravel.com/docs/6.x/queries#inserts)
+        - insertGetId() (https://laravel.com/docs/6.x/queries#inserts)
+        - updateOrInsert() (https://laravel.com/docs/6.x/queries#updates)
+        - Updaten van een JSON kolom (https://laravel.com/docs/6.x/queries#updating-json-columns)
+        - Incrementen of decrementen van een kolom (https://laravel.com/docs/6.x/queries#increment-and-decrement)
+    - Data verwijderen:
+        - delete() (https://laravel.com/docs/6.x/queries#deletes)
+        - truncate() (https://laravel.com/docs/6.x/queries#deletes)
+    - Query dumpen (https://laravel.com/docs/6.x/queries#debugging)
+- Paginering (https://laravel.com/docs/6.x/pagination)
+    - Paginering van Eloquent models (https://laravel.com/docs/6.x/pagination#paginating-eloquent-results)
+    - Custom paginator (https://laravel.com/docs/6.x/pagination#manually-creating-a-paginator)
+    - Custom manier om pagina urls te maken (https://laravel.com/docs/6.x/pagination#displaying-pagination-results)
+    - Custom aantal links rechts en links (https://laravel.com/docs/6.x/pagination#displaying-pagination-results)
+    - Toon de paginering links (https://laravel.com/docs/6.x/pagination#displaying-pagination-results)
+- Migraties (https://laravel.com/docs/6.x/migrations)
+    - Genereren van een migratie template (https://laravel.com/docs/6.x/migrations#generating-migrations)
+    - Migratie terugdraaien (https://laravel.com/docs/6.x/migrations#rolling-back-migrations)
+    - Migratie commandos
+        - Tables
+            - Table aanmaken (https://laravel.com/docs/6.x/migrations#creating-tables)
+            - Renamen / droppen van een table (https://laravel.com/docs/6.x/migrations#renaming-and-dropping-tables)
+        - Columns
+            - Columns aanmaken (https://laravel.com/docs/6.x/migrations#columns)
+                - Column modifiers (https://laravel.com/docs/6.x/migrations#column-modifiers)
+            - Columns aanpassen (https://laravel.com/docs/6.x/migrations#modifying-columns)
+            - Column droppen (https://laravel.com/docs/6.x/migrations#dropping-columns)
+        - Indexes (https://laravel.com/docs/6.x/migrations#indexes)
+            - Aanmaken (https://laravel.com/docs/6.x/migrations#creating-indexes)
+            - Renamen (https://laravel.com/docs/6.x/migrations#renaming-indexes)
+            - Droppen (https://laravel.com/docs/6.x/migrations#dropping-indexes)
+        - Foreign key constraints (https://laravel.com/docs/6.x/migrations#foreign-key-constraints)
+- Seeding
+    - Genereer een seeder (https://laravel.com/docs/6.x/seeding#writing-seeders)
+    - Gebruiken van model factories (https://laravel.com/docs/6.x/seeding#using-model-factories)
+    - Seeders draaien (https://laravel.com/docs/6.x/seeding#running-seeders)

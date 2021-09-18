@@ -1,22 +1,89 @@
 # Eloquent ORM
-## Conventions
-### Official documentation
-https://laravel.com/docs/6.x/eloquent#eloquent-model-conventions
-## Relationships
-### Official documentation
-https://laravel.com/docs/6.x/eloquent-relationships
-## Eloquent Collections
-### Official documentation
-https://laravel.com/docs/6.x/eloquent-collections
-## Mutators / Accessors
-### Official documentation
-https://laravel.com/docs/6.x/eloquent-mutators
-## API Resources
-### Official documentation
-https://laravel.com/docs/6.x/eloquent-resources
-## Serialization
-### Official documentation
-https://laravel.com/docs/6.x/eloquent-serialization
-## Scopes
-### Official documentation
-https://laravel.com/docs/6.x/eloquent#query-scopes
+- Models
+    - Genereren (inclusief migratie) (https://laravel.com/docs/6.x/eloquent#defining-models)
+    - Conventies (https://laravel.com/docs/6.x/eloquent#eloquent-model-conventions)
+    - Default column waardes (https://laravel.com/docs/6.x/eloquent#default-attribute-values)
+    - Refresh een model (https://laravel.com/docs/6.x/eloquent#retrieving-models)
+    - Chunken/cursoren van resultaten (https://laravel.com/docs/6.x/eloquent#chunking-results)
+    - Subqueries (https://laravel.com/docs/6.x/eloquent#advanced-subqueries)
+    - FirstOr (https://laravel.com/docs/6.x/eloquent#retrieving-single-models)
+    - 404 als een model niet gevonden is (https://laravel.com/docs/6.x/eloquent#retrieving-single-models)
+    - Opslaan (https://laravel.com/docs/6.x/eloquent#inserts, https://laravel.com/docs/6.x/eloquent#updates)
+    - Is dirty/clean (https://laravel.com/docs/6.x/eloquent#updates)
+    - Mass assignment (https://laravel.com/docs/6.x/eloquent#mass-assignment)
+    - firstOrCreate / firstOrNew / updateOrCreate (https://laravel.com/docs/6.x/eloquent#other-creation-methods)
+    - delete (https://laravel.com/docs/6.x/eloquent#deleting-models)
+        - Soft delete (https://laravel.com/docs/6.x/eloquent#soft-deleting)
+            - soft deleted models includen (https://laravel.com/docs/6.x/eloquent#querying-soft-deleted-models)
+            - undo (https://laravel.com/docs/6.x/eloquent#querying-soft-deleted-models)
+            - Force delete (https://laravel.com/docs/6.x/eloquent#querying-soft-deleted-models)
+    - Clone (https://laravel.com/docs/6.x/eloquent#replicating-models)
+    - Events (https://laravel.com/docs/6.x/eloquent#events)
+    - Observers (https://laravel.com/docs/6.x/eloquent#observers)
+    - Models vergelijken (https://laravel.com/docs/6.x/eloquent#comparing-models)
+    - Default filter(s) instellen en die bruikbaar maken binnen een model (global scopes) (https://laravel.com/docs/6.x/eloquent#global-scopes)
+    - Losse filters die je kan gebruiken als je een model aanroept, deze zijn dus niet specifiek voor een bepaald model (local scopes) (https://laravel.com/docs/6.x/eloquent#local-scopes)
+- Relaties (https://laravel.com/docs/6.x/eloquent-relationships)
+    - 1 op 1, bijvoorbeeld 1 rijbewijs bij 1 gebruiker (https://laravel.com/docs/6.x/eloquent-relationships#one-to-one)
+        - Polymorfische variant, bijvoorbeeld 1 document en 1 gebruiker/1 auto, waarbij een document een rijbewijs of kentekenbewijs kan zijn en 2 models (auto, bestuurder) dus naar dezelfde derde model (document) verwijzen (https://laravel.com/docs/6.x/eloquent-relationships#one-to-one-polymorphic-relations)
+    - 1 op veel, bijvoorbeeld 1 eigenaar van meerdere autos (https://laravel.com/docs/6.x/eloquent-relationships#one-to-many)
+        - Inverse, bijvoorbeeld van 1 auto naar 1 eigenaar, die meerdere autos heeft (https://laravel.com/docs/6.x/eloquent-relationships#one-to-many-inverse)
+        - Polymorfische variant (https://laravel.com/docs/6.x/eloquent-relationships#one-to-many-polymorphic-relations)
+    - Veel op veel, bijvoorbeeld bestuurders en SUVs (https://laravel.com/docs/6.x/eloquent-relationships#many-to-many)
+        - Inverse, bijvoorbeeld SUVs en bestuurders; Dit is gelijk aan de normale veel op veel (https://laravel.com/docs/6.x/eloquent-relationships#many-to-many)
+        - De tussenliggende tabel model opvragen (https://laravel.com/docs/6.x/eloquent-relationships#many-to-many)
+        - Speciale model maken voor een tussenliggende tabel (https://laravel.com/docs/6.x/eloquent-relationships#defining-custom-intermediate-table-models)
+        - Polymorfische variant, bijvoorbeeld een Post, Video en Tag, waarbij  je zoawel Post tags als Video tags in de Tags table hebt staan (https://laravel.com/docs/6.x/eloquent-relationships#many-to-many-polymorphic-relations)
+    - Via via (1 op 1 op 1), bijvoorbeeld een bestuurder die een Volkswagen Golf met kenteken X heeft, die weer een RDW document heeft (https://laravel.com/docs/6.x/eloquent-relationships#has-one-through)
+    - Via via (1 op veel op veel), bijvoorbeeld een land met daarin alle bestuurders van een SUV (https://laravel.com/docs/6.x/eloquent-relationships#has-many-through)
+    - Zelf de waardes voor polymorfische columns bepalen (https://laravel.com/docs/6.x/eloquent-relationships#custom-polymorphic-types)
+    - Meerdere where statements correct groeperen (dit is een gotcha) (https://laravel.com/docs/6.x/eloquent-relationships#querying-relations)
+    - Eager loading van relaties om het aantal queries te verminderen (https://laravel.com/docs/6.x/eloquent-relationships#relationship-methods-vs-dynamic-properties)
+    - Checken of een relatie resultaten bevat (https://laravel.com/docs/6.x/eloquent-relationships#querying-relationship-existence)
+        - Checken of een relatie GEEN resultaten bevat (https://laravel.com/docs/6.x/eloquent-relationships#querying-relationship-absence)
+    - Checken of een relatie polymorfisch is (https://laravel.com/docs/6.x/eloquent-relationships#querying-polymorphic-relationships)
+    - Alleen tellen hoeveel resultaten een relatie heeft (https://laravel.com/docs/6.x/eloquent-relationships#counting-related-models)
+    - Eager loading, om het aantal queries voor een relatie drastisch te verminderen (2 ipv N+1) (https://laravel.com/docs/6.x/eloquent-relationships#eager-loading)
+    - Lazy eager loading (https://laravel.com/docs/6.x/eloquent-relationships#lazy-eager-loading)
+    - Related models opslaan (https://laravel.com/docs/6.x/eloquent-relationships#inserting-and-updating-related-models)
+    - Timestamp van een parent updaten bij het wijzigen van een child (https://laravel.com/docs/6.x/eloquent-relationships#touching-parent-timestamps)
+- Collections (https://laravel.com/docs/6.x/eloquent-collections)
+    - Methods (https://laravel.com/docs/6.x/eloquent-collections#available-methods)
+        - Check of een bepaald id bestaat in een collection (contains)
+        - Geef de models terug die niet opgegeven worden (diff)
+        - Alle models die niet een van de opgegeven ids heeft (except)
+        - Geef het model met het opgegeven id (find)
+        - Herlaad alle models in een collection (fresh)
+        - Alle models in een collection met een van de opgegeven ids (intersect)
+        - Eager load alle relaties van de models in een collection (load)
+        - Eager load alle relaties die nog niet geladen zijn
+        - Geef alle ids terug (modelKeys)
+        - Maak verborgen properties zichtbaar (makeVisible)
+        - Maak properties onzichtbaar (makeHidden)
+        - Alle models met bepaalde ids (only)
+        - Filter alle niet-unieke models eruit (unique)
+        - Custom collection op een of meerdere models instellen (https://laravel.com/docs/6.x/eloquent-collections#custom-collections)
+- Mutators / Accessors (https://laravel.com/docs/6.x/eloquent-mutators)
+    - Een custom getter voor een bepaalde property maken zodat je de waarde aan kan passen voor ie getoond wordt (https://laravel.com/docs/6.x/eloquent-mutators#defining-an-accessor)
+    - Een custom setter voor een bepaalde property maken zodat je de waarde aan kan passen voordat ie opgeslagen wordt (https://laravel.com/docs/6.x/eloquent-mutators#defining-a-mutator)
+    - Een extra date property toevoegen die automatisch wordt omgezet naar Carbon bij het opvragen (https://laravel.com/docs/6.x/eloquent-mutators#date-mutators)
+    - Een property casten naar een specifiek type (https://laravel.com/docs/6.x/eloquent-mutators#attribute-casting)
+        - Van JSON naar een array (https://laravel.com/docs/6.x/eloquent-mutators#array-and-json-casting)
+- API Resources
+    - Maak een nieuwe resource class aan, waarin je kan instellen hoe een model of collection omgezet moet worden naar json. Beetje zoals JsonSerializable (https://laravel.com/docs/6.x/eloquent-resources#generating-resources)
+    - Een model resource retourneren in een API route (https://laravel.com/docs/6.x/eloquent-resources#concept-overview)
+    - Een collection resource retourneren in een API route (https://laravel.com/docs/6.x/eloquent-resources#resource-collections)
+    - Een related model/collection resource gebruiken in een model/collection resource (https://laravel.com/docs/6.x/eloquent-resources#writing-resources)
+        - Alleen als de relatie al ingeladen is (https://laravel.com/docs/6.x/eloquent-resources#conditional-relationships)
+        - Ook data van een pivot table meenemen (https://laravel.com/docs/6.x/eloquent-resources#conditional-relationships)
+    - De output NIET wrappen in een data veld (https://laravel.com/docs/6.x/eloquent-resources#data-wrapping)
+    - Pagination toevoegen aan een resource collection (https://laravel.com/docs/6.x/eloquent-resources#pagination)
+    - Met condities (https://laravel.com/docs/6.x/eloquent-resources#conditional-attributes)
+    - Meta data toevoegen (https://laravel.com/docs/6.x/eloquent-resources#adding-meta-data)
+    - Extra HTTP headers toevoegen aan een resource (https://laravel.com/docs/6.x/eloquent-resources#resource-responses)
+- Serialization (https://laravel.com/docs/6.x/eloquent-serialization)
+    - Een model/collection omzetten naar een array (https://laravel.com/docs/6.x/eloquent-serialization#serializing-to-arrays)
+    - Een model/collection omzetten naar json (https://laravel.com/docs/6.x/eloquent-serialization#serializing-to-json)
+    - Bepaalde properties/relaties niet meenemen wanneer een model wordt omgezet naar json (https://laravel.com/docs/6.x/eloquent-serialization#hiding-attributes-from-json)
+    - Custom properties toevoegen bij het omzetten naar json/array in een model (https://laravel.com/docs/6.x/eloquent-serialization#appending-values-to-json)
+    - Format van een date aanpassen wanneer ie geserialized wordt (https://laravel.com/docs/6.x/eloquent-serialization#date-serialization)

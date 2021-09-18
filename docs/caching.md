@@ -1,16 +1,15 @@
 # Caching
-## Drivers / Configuration
-### Official documentation
-https://laravel.com/docs/6.x/cache#configuration
-## Storing Items
-### Official documentation
-https://laravel.com/docs/6.x/cache#storing-items-in-the-cache
-## Retrieving Items
-### Official documentation
-https://laravel.com/docs/6.x/cache#retrieving-items-from-the-cache
-## Cache Tags
-### Official documentation
-https://laravel.com/docs/6.x/cache#cache-tags
-## Creating Custom Drivers
-### Official documentation
-https://laravel.com/docs/6.x/cache#adding-custom-cache-drivers
+- Ophalen van cache data uit meerdere stores (https://laravel.com/docs/6.x/cache#obtaining-a-cache-instance, https://laravel.com/docs/6.x/cache#retrieving-items-from-the-cache)
+    - Default meegeven (bijv met een Closure) (https://laravel.com/docs/6.x/cache#retrieving-items-from-the-cache)
+    - Check of de cache iets heeft (https://laravel.com/docs/6.x/cache#retrieving-items-from-the-cache)
+    - Ophalen, of als ie nog niet bestaat, setten (https://laravel.com/docs/6.x/cache#retrieving-items-from-the-cache)
+    - Ophalen en flushen (https://laravel.com/docs/6.x/cache#retrieving-items-from-the-cache)
+    - via de cache() functie (https://laravel.com/docs/6.x/cache#the-cache-helper)
+- Setten van een cache item (https://laravel.com/docs/6.x/cache#storing-items-in-the-cache)
+    - Increment/decrement (https://laravel.com/docs/6.x/cache#retrieving-items-from-the-cache)
+    - Tijdelijk opslaan of permanent (als secondes en in DateTime) (https://laravel.com/docs/6.x/cache#storing-items-in-the-cache)
+    - Via de cache() functie (https://laravel.com/docs/6.x/cache#the-cache-helper)
+- Flushen van items (https://laravel.com/docs/6.x/cache#removing-items-from-the-cache)
+- Flushen van alles (https://laravel.com/docs/6.x/cache#removing-items-from-the-cache)
+- Locken van dingen (https://laravel.com/docs/6.x/cache#atomic-locks)
+- Taggen van cache items (https://laravel.com/docs/6.x/cache#cache-tags)

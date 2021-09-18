@@ -1,24 +1,16 @@
 # Architecture
-## Request lifecycle
-### Official documentation
-https://laravel.com/docs/6.x/lifecycle
-## Service Container Binding and Resolution
-### Official documentation
-https://laravel.com/docs/6.x/container
-## Service providers
-### Official documentation
-https://laravel.com/docs/6.x/providers
-## Facades
-### Official documentation
-https://laravel.com/docs/6.x/facades
-## HTTP Verbs
-Verb | URI | Action | Route Name
------|-----|--------|------------
-GET | /photos | index | photos.index
-GET | /photos/create | create | photos.create
-POST | /photos | store | photos.store
-GET | /photos/{photo} | show | photos.show
-GET | /photos/{photo}/edit | edit | photos.edit
-PUT/PATCH | /photos/{photo} | update | photos.update
-DELETE | /photos/{photo} | destroy | photos.destroy
-<sub>Source: https://laravel.com/docs/6.x/controllers#resource-controllers </sub>
+- Service providers aanmaken in AppServiceProvider (https://laravel.com/docs/6.x/container) (php artisan make:provider VoorbeeldServiceProvider)
+	- Minstens 1 moet gebruik maken van een Interface (https://laravel.com/docs/6.x/container#binding-interfaces-to-implementations)
+	- Minstens 1 singleton provider (https://laravel.com/docs/6.x/container#binding-basics)
+	- Minstens 1 primitive (https://laravel.com/docs/6.x/container#binding-basics)
+	- Minstens 1 contextual binding (https://laravel.com/docs/6.x/container#contextual-binding)
+	- Minstens 1 tag (https://laravel.com/docs/6.x/container#tagging)
+	- Minstens 1 extended binding (https://laravel.com/docs/6.x/container#extending-bindings)
+	- Minstens 1 deferred service provider (https://laravel.com/docs/6.x/providers#deferred-providers)
+- Gebruiken/resolven van een service provider (https://laravel.com/docs/6.x/container#resolving)
+- Gebruik maken van een container event om bijv een setter in die service provider te gebruiken (https://laravel.com/docs/6.x/container#container-events)
+- De boot() method in een service provider gebruiken om dingen in te laden nadat alle service providers zijn ingeladen (https://laravel.com/docs/6.x/providers#the-boot-method)
+- Minstens 1 Facade (ook gebruiken in een Unit test) (https://laravel.com/docs/6.x/facades)
+- Minstens 1 Helper Function (https://laravel.com/docs/6.x/facades#facades-vs-helper-functions)
+- Minstens 1 real-time facade (https://laravel.com/docs/6.x/facades#real-time-facades)
+- Minstens 1 van elk van deze controller methods: index, create, store, show, edit, update, destroy (https://laravel.com/docs/6.x/controllers#resource-controllers)

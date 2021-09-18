@@ -1,22 +1,16 @@
 # Controllers
-## Defining Controllers
-### Official documentation
-https://laravel.com/docs/6.x/controllers#defining-controllers
-## Controller Namespacing
-### Official documentation
-https://laravel.com/docs/6.x/controllers#controllers-and-namespaces
-## Single Action Controllers
-### Official documentation
-https://laravel.com/docs/6.x/controllers#single-action-controllers
-## Middleware
-### Official documentation
-https://laravel.com/docs/6.x/controllers#controller-middleware
-## Resource Controllers
-### Official documentation
-https://laravel.com/docs/6.x/controllers#resource-controllers
-## Dependency Injection
-### Official documentation
-https://laravel.com/docs/6.x/controllers#dependency-injection-and-controllers
-## Route Caching
-### Official documentation
-https://laravel.com/docs/6.x/controllers#route-caching
+- Controllers in submappen (https://laravel.com/docs/6.x/controllers#controllers-and-namespaces)
+- Controller die maar 1 ding afhandelt (https://laravel.com/docs/6.x/controllers#single-action-controllers)
+- Middleware gebruik in een controller constructor plaatsen (https://laravel.com/docs/6.x/controllers#controller-middleware)
+- Middleware in een closure (https://laravel.com/docs/6.x/controllers#controller-middleware)
+- Resource controller (https://laravel.com/docs/6.x/controllers#resource-controllers)
+    - Ook een gedeeltelijke resource controller (https://laravel.com/docs/6.x/controllers#restful-partial-resource-routes)
+    - API Resource route (https://laravel.com/docs/6.x/controllers#restful-partial-resource-routes)
+    - Geneste resource (https://laravel.com/docs/6.x/controllers#restful-nested-resources)
+        - Ook een shallow geneste resource (https://laravel.com/docs/6.x/controllers#restful-nested-resources)
+    - Custom resource parameter naam (https://laravel.com/docs/6.x/controllers#restful-naming-resource-route-parameters)
+    - Locale resource routes (https://laravel.com/docs/6.x/controllers#restful-localizing-resource-uris)
+    - Extra resource routes (https://laravel.com/docs/6.x/controllers#restful-supplementing-resource-controllers)
+- Gebruik dependency injection bij een controller (https://laravel.com/docs/6.x/controllers#dependency-injection-and-controllers)
+- Gebruik route cache (https://laravel.com/docs/6.x/controllers#route-caching)
+    - Niet vergeten om te clearen (https://laravel.com/docs/6.x/controllers#route-caching)

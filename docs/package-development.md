@@ -1,19 +1,12 @@
 # Package Development
-## Discovery
-### Official documentation
-https://laravel.com/docs/6.x/packages#package-discovery
-## Service Providers
-### Official documentation
-https://laravel.com/docs/6.x/packages#service-providers
-## Resources
-### Official documentation
-https://laravel.com/docs/6.x/packages#resources
-## Commands
-### Official documentation
-https://laravel.com/docs/6.x/packages#commands
-## Assets
-### Official documentation
-https://laravel.com/docs/6.x/packages#public-assets
-## Publishing File Groups
-### Official documentation
-https://laravel.com/docs/6.x/packages#publishing-file-groups
+- Service providers uit je package automatisch laten toevoegen aan app.php (https://laravel.com/docs/6.x/packages#package-discovery)
+- Service provider(s) van je package importeren in Laravel (https://laravel.com/docs/6.x/packages#service-providers)
+- Configuratie overschrijfbaar maken (https://laravel.com/docs/6.x/packages#configuration)
+- Routes van je package importeren in Laravel (https://laravel.com/docs/6.x/packages#routes)
+- Migrations van je package importeren in Laravel (https://laravel.com/docs/6.x/packages#migrations)
+- Factories van je package importeren in Laravel (https://laravel.com/docs/6.x/packages#factories)
+- Vertalingen van je package importeren in Laravel (https://laravel.com/docs/6.x/packages#translations)
+- Views van je package importeren in Laravel (https://laravel.com/docs/6.x/packages#views)
+- Commands van je package importeren in Laravel (https://laravel.com/docs/6.x/packages#commands)
+- Assets (afbeeldingen, JS etc.) van je package importeren in Laravel (https://laravel.com/docs/6.x/packages#public-assets)
+- Onderdelen groeperen bij het publiceren (https://laravel.com/docs/6.x/packages#publishing-file-groups)

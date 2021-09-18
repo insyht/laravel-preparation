@@ -1,19 +1,27 @@
 # Routing
-## Redirects
-### Official documentation
-https://laravel.com/docs/6.x/routing#redirect-routes
-## Route Parameters
-### Official documentation
-https://laravel.com/docs/6.x/routing#route-parameters
-## Named Routes
-### Official documentation
-https://laravel.com/docs/6.x/routing#named-routes
-## Route Groups
-### Official documentation
-https://laravel.com/docs/6.x/routing#route-groups
-## Route Model Binding
-### Official documentation
-https://laravel.com/docs/6.x/routing#route-model-binding
-## Rate Limiting
-### Official documentation
-https://laravel.com/docs/6.x/routing#rate-limiting
+- Closure based route (https://laravel.com/docs/6.x/routing#basic-routing)
+- De verschillende route bestanden, zoals api.php en web.php (https://laravel.com/docs/6.x/routing#basic-routing)
+- De verschillende router methods (zoals get, post en put) (https://laravel.com/docs/6.x/routing#basic-routing)
+- CSRF bescherming voor PUT, POST en DELETE (https://laravel.com/docs/6.x/routing#basic-routing)
+- Redirecten naar een andere route (https://laravel.com/docs/6.x/routing#redirect-routes)
+- Een simpele route die gelijk een view teruggeeft, zodat je niet een complete controller of route hoeft te bouwen (https://laravel.com/docs/6.x/routing#view-routes)
+- Een route met een verplichte parameter erin maken (https://laravel.com/docs/6.x/routing#required-parameters)
+- Een route met een optionele parameter erin maken (https://laravel.com/docs/6.x/routing#parameters-optional-parameters)
+- Een regex beperking op een parameter zetten (https://laravel.com/docs/6.x/routing#parameters-regular-expression-constraints)
+    - Globaal (op basis van de naam van de parameter) (https://laravel.com/docs/6.x/routing#parameters-global-constraints)
+- Een route een naam geven zodat je er makkelijker naar kan verwijzen bij bijvoorbeeld een redirect (https://laravel.com/docs/6.x/routing#named-routes)
+- Een default url parameter instellen voor een gehele request, bijvoorbeeld een locale (https://laravel.com/docs/6.x/routing#named-routes paarse vakje)
+- Routes groeperen (https://laravel.com/docs/6.x/routing#route-groups)
+    - Middleware op een hele groep toepassen (https://laravel.com/docs/6.x/routing#route-group-middleware)
+    - Dezelfde namespace gebruiken voor alle routes in een groep (https://laravel.com/docs/6.x/routing#route-group-namespaces)
+    - Routing voor subdomeinen (https://laravel.com/docs/6.x/routing#route-group-subdomain-routing)
+    - Alle routes in een groep een prefix geven (bijvoorbeeld /wp-admin/) (https://laravel.com/docs/6.x/routing#route-group-prefixes)
+    - De namen van alle routes in een groep een prefix geven (https://laravel.com/docs/6.x/routing#route-group-name-prefixes)
+- Parameters in een route automatisch resolven (route model binding) (https://laravel.com/docs/6.x/routing#route-model-binding)
+    - Impliciet (https://laravel.com/docs/6.x/routing#implicit-binding)
+    - Expliciet een parameternaam aan een model koppelen (https://laravel.com/docs/6.x/routing#explicit-binding)
+    - Zelf de regels bepalen waarmee een parameter wordt omgezet naar een model (https://laravel.com/docs/6.x/routing#explicit-binding)
+- Een fallback route instellen (normaal is dat automatisch een 404) (https://laravel.com/docs/6.x/routing#fallback-routes)
+- Rate limiting op een route zetten (https://laravel.com/docs/6.x/routing#rate-limiting)
+- Een formulier maken in Blade voor een PUT, PATCH of DELETE (https://laravel.com/docs/6.x/routing#form-method-spoofing)
+- De huidige route opvragen (https://laravel.com/docs/6.x/routing#accessing-the-current-route)

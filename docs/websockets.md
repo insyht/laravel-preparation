@@ -1,16 +1,23 @@
 # Websockets
-## Broadcasting Events
-### Official documentation
-https://laravel.com/docs/6.x/broadcasting#broadcasting-events
-## Receiving Events
-### Official documentation
-https://laravel.com/docs/6.x/broadcasting#listening-for-events
-## Broadcasting Channels
-### Official documentation
-https://laravel.com/docs/6.x/broadcasting#authorizing-channels
-## Presence Channels
-### Official documentation
-https://laravel.com/docs/6.x/broadcasting#presence-channels
-## Client Events
-### Official documentation
-https://laravel.com/docs/6.x/broadcasting#client-events
+- Configuratie (https://laravel.com/docs/6.x/broadcasting#configuration)
+- Voorbeeldapplicatie (https://laravel.com/docs/6.x/broadcasting#using-example-application)
+- Een Event broadcastable maken (https://laravel.com/docs/6.x/broadcasting#defining-broadcast-events)
+- Custom broadcast naam (https://laravel.com/docs/6.x/broadcasting#broadcast-name)
+- Data broadcasten (https://laravel.com/docs/6.x/broadcasting#broadcast-data)
+- Een broadcast op een niet-default queue plaatsen (https://laravel.com/docs/6.x/broadcasting#broadcast-queue)
+- Iets alleen broadcasten onder bepaalde voorwaarden (https://laravel.com/docs/6.x/broadcasting#broadcast-conditions)
+- Authorisatie endpoint routes (hierin worden de endpoints gedefinieerd waarop gecheckt kan worden of een gebruiker de private/presence channel mag afluisteren) (https://laravel.com/docs/6.x/broadcasting#defining-authorization-routes)
+- Authorisatie callbacks (deze checkt of de gebruiker een private/presence channel mag afluisteren) (https://laravel.com/docs/6.x/broadcasting#defining-authorization-callbacks)
+- Een channel class maken om alle channel logica in 1 class te hebben voor een specifieke channel (https://laravel.com/docs/6.x/broadcasting#defining-channel-classes)
+- Een event versturen als broadcast (https://laravel.com/docs/6.x/broadcasting#broadcasting-events)
+    - Naar iedereen sturen behalve de huidige gebruiker (https://laravel.com/docs/6.x/broadcasting#only-to-others)
+- Een broadcast ontvangen (https://laravel.com/docs/6.x/broadcasting#receiving-broadcasts)
+    - Laravel Echo installeren (https://laravel.com/docs/6.x/broadcasting#installing-laravel-echo)
+    - Luisteren naar broadcasts (https://laravel.com/docs/6.x/broadcasting#listening-for-events)
+    - Een channel verlaten (https://laravel.com/docs/6.x/broadcasting#leaving-a-channel)
+- Presence channels (private channels waarbij je ook een lijst van subscribers hebt) (https://laravel.com/docs/6.x/broadcasting#presence-channels)
+    - Authoriseren (https://laravel.com/docs/6.x/broadcasting#authorizing-presence-channels)
+    - Een presence channel joinen (https://laravel.com/docs/6.x/broadcasting#joining-presence-channels)
+    - Broadcasten (https://laravel.com/docs/6.x/broadcasting#broadcasting-to-presence-channels)
+    - Broadcasten zonder dat het via de server loopt (https://laravel.com/docs/6.x/broadcasting#client-events)
+- Gebruiken voor notificaties (https://laravel.com/docs/6.x/broadcasting#notifications)

@@ -1,13 +1,15 @@
 # Events
-## Registering Events / Listeners
-### Official documentation
-https://laravel.com/docs/6.x/events#registering-events-and-listeners
-## Queued Listeners
-### Official documentation
-https://laravel.com/docs/6.x/events#queued-event-listeners
-## Dispatching Events
-### Official documentation
-https://laravel.com/docs/6.x/events#dispatching-events
-## Subscribing to Events
-### Official documentation
-https://laravel.com/docs/6.x/events#event-subscribers
+- Een event en listener registreren (https://laravel.com/docs/6.x/events#registering-events-and-listeners)
+- Classes aanmaken voor alle geregistreerde events en listeners (https://laravel.com/docs/6.x/events#generating-events-and-listeners)
+- Events en listeners registreren door auto-discovery (https://laravel.com/docs/6.x/events#event-discovery)
+    - Cachen van de lijst van events en listeners (https://laravel.com/docs/6.x/events#event-discovery)
+- Een event aanmaken (https://laravel.com/docs/6.x/events#defining-events)
+- Een listener aanmaken (https://laravel.com/docs/6.x/events#defining-listeners)
+    - Een event stoppen zodat andere listeners er niets mee doen (https://laravel.com/docs/6.x/events#defining-listeners)
+- Een listener queuen voor wanneer ie een trage taak moet uitvoeren (https://laravel.com/docs/6.x/events#queued-event-listeners)
+    - Alleen onder bepaalde condities queuen (https://laravel.com/docs/6.x/events#queued-event-listeners)
+    - Een gefaalde queued listener afhandelen (https://laravel.com/docs/6.x/events#handling-failed-jobs)
+- Een event triggeren (https://laravel.com/docs/6.x/events#dispatching-events)
+- Subscriben op meerdere events in 1 class (https://laravel.com/docs/6.x/events#event-subscribers)
+    - Maken (https://laravel.com/docs/6.x/events#writing-event-subscribers)
+    - Registreren (https://laravel.com/docs/6.x/events#registering-event-subscribers)

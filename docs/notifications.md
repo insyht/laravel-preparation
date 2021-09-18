@@ -1,28 +1,19 @@
 # Notifications
-## Creating Notifications
-### Official documentation
-https://laravel.com/docs/6.x/notifications#creating-notifications
-## Sending Notifications
-### Official documentation
-https://laravel.com/docs/6.x/notifications#sending-notifications
-## Mail Notifications
-### Official documentation
-https://laravel.com/docs/6.x/notifications#mail-notifications
-## Markdown
-### Official documentation
-https://laravel.com/docs/6.x/notifications#markdown-mail-notifications
-## Database Notifications
-### Official documentation
-https://laravel.com/docs/6.x/notifications#database-notifications
-## Broadcast Notifications
-### Official documentation
-https://laravel.com/docs/6.x/notifications#broadcast-notifications
-## SMS Notifications
-### Official documentation
-https://laravel.com/docs/6.x/notifications#sms-notifications
-## Slack Notifications
-### Official documentation
-https://laravel.com/docs/6.x/notifications#slack-notifications
-## Custom Channels
-### Official documentation
-https://laravel.com/docs/6.x/notifications#custom-channels
+- Een notification class aanmaken (https://laravel.com/docs/6.x/notifications#creating-notifications)
+- Een notification sturen via een trait (hierbij kun je het op slechts 1 model tegelijk gebruiken) (https://laravel.com/docs/6.x/notifications#using-the-notifiable-trait)
+- Een notificatie sturen via een facade (hiermee kun je ook collections gebruiken) (https://laravel.com/docs/6.x/notifications#using-the-notification-facade)
+- Een notificatie via een of meer specifieke channels versturen (https://laravel.com/docs/6.x/notifications#specifying-delivery-channels)
+- Een notificatie in de queue zetten (https://laravel.com/docs/6.x/notifications#queueing-notifications)
+- Een notificatie versturen waarbij je de parameters ter plekke meegeeft (https://laravel.com/docs/6.x/notifications#on-demand-notifications)
+- Een notificatie versturen via de mail met een simpele voorgedefinieerde styling (https://laravel.com/docs/6.x/notifications#formatting-mail-messages)
+    - Preview bekijken (https://laravel.com/docs/6.x/notifications#previewing-mail-notifications)
+    - Markdown email (https://laravel.com/docs/6.x/notifications#markdown-mail-notifications)
+- Een notificatie naar de database "versturen" (inserten) (https://laravel.com/docs/6.x/notifications#database-notifications)
+    - Een database notificatie ophalen (https://laravel.com/docs/6.x/notifications#accessing-the-notifications)
+    - Een notificatie als "gelezen" markeren (https://laravel.com/docs/6.x/notifications#marking-notifications-as-read)
+- Een notificatie broadcasten (https://laravel.com/docs/6.x/notifications#broadcast-notifications)
+    - Format definiëren (https://laravel.com/docs/6.x/notifications#formatting-broadcast-notifications)
+    - Luisteren naar notificaties (https://laravel.com/docs/6.x/notifications#listening-for-notifications)
+- Locale instellen voor notificaties (https://laravel.com/docs/6.x/notifications#localizing-notifications)
+- Event afvangen wanneer een notificatie verzonden is (https://laravel.com/docs/6.x/notifications#notification-events)
+- Zelf een channel maken (https://laravel.com/docs/6.x/notifications#custom-channels)

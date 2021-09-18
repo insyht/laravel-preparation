@@ -1,25 +1,115 @@
 # Testing
-## Creating / Running Tests
-### Official documentation
-https://laravel.com/docs/6.x/testing#creating-and-running-tests
-## HTTP Tests
-### Official documentation
-https://laravel.com/docs/6.x/http-tests
-## Session / Authentication
-### Official documentation
-https://laravel.com/docs/6.x/http-tests#session-and-authentication
-## Testing File Uploads
-### Official documentation
-https://laravel.com/docs/6.x/http-tests#testing-file-uploads
-## Available Assertions
-### Official documentation
-https://laravel.com/docs/6.x/http-tests#available-assertions
-## Browser Tests / Dusk
-### Official documentation
-https://laravel.com/docs/6.x/dusk
-## Data Factories
-### Official documentation
-https://laravel.com/docs/6.x/database-testing#writing-factories
-## Fakes / Mocking
-### Official documentation
-https://laravel.com/docs/6.x/mocking
+- Je environment instellen voor PHPUnit (https://laravel.com/docs/6.x/testing#environment)
+- Een nieuwe PHPUnit test maken (https://laravel.com/docs/6.x/testing#creating-and-running-tests)
+- Custom HTTP Headers in je test (https://laravel.com/docs/6.x/http-tests#customizing-request-headers)
+- Cookies instellen voor je test (https://laravel.com/docs/6.x/http-tests#cookies)
+- Response dumpen in een test voor debugging (https://laravel.com/docs/6.x/http-tests#debugging-responses)
+- Sessiedata aanpassen (https://laravel.com/docs/6.x/http-tests#session-and-authentication)
+- Je voordoen als een bepaalde user (https://laravel.com/docs/6.x/http-tests#session-and-authentication)
+- Kiezen welke guard gebruikt moet worden voor authenticatie (https://laravel.com/docs/6.x/http-tests#session-and-authentication)
+- JSON APIs testen (https://laravel.com/docs/6.x/http-tests#testing-json-apis)
+- Bestand uploads testen (https://laravel.com/docs/6.x/http-tests#testing-file-uploads)
+- Extra assertions vanuit Laravel (https://laravel.com/docs/6.x/http-tests#response-assertions)
+    - Check of een response voor bepaalde cookies (https://laravel.com/docs/6.x/http-tests#assert-cookie, https://laravel.com/docs/6.x/http-tests#assert-cookie-expired, https://laravel.com/docs/6.x/http-tests#assert-cookie-not-expired, https://laravel.com/docs/6.x/http-tests#assert-cookie-missing)
+    - Check dat de response een bepaalde string wel of niet bevat (https://laravel.com/docs/6.x/http-tests#assert-dont-see, https://laravel.com/docs/6.x/http-tests#assert-dont-see-text, https://laravel.com/docs/6.x/http-tests#assert-see, https://laravel.com/docs/6.x/http-tests#assert-see-in-order, https://laravel.com/docs/6.x/http-tests#assert-see-text, https://laravel.com/docs/6.x/http-tests#assert-see-text-in-order)
+    - Check dat de response een exacte JSON string is (https://laravel.com/docs/6.x/http-tests#assert-exact-json)
+    - Check dat de response bepaalde JSON bevat (https://laravel.com/docs/6.x/http-tests#assert-json)
+    - Check dat de response JSON bevat met een bepaalde array met een bepaald aantal items als array (https://laravel.com/docs/6.x/http-tests#assert-json-count)
+    - Check dat de response wel of niet JSON bevat met een bepaalde array erin (https://laravel.com/docs/6.x/http-tests#assert-json-fragment, https://laravel.com/docs/6.x/http-tests#assert-json-missing, https://laravel.com/docs/6.x/http-tests#assert-json-missing-exact)
+    - Check of de response JSON een bepaalde structuur heeft (https://laravel.com/docs/6.x/http-tests#assert-json-structure)
+    - Check dat een bepaalde header wel of niet aanwezig is in de response (https://laravel.com/docs/6.x/http-tests#assert-header, https://laravel.com/docs/6.x/http-tests#assert-header-missing)
+    - Check of de response een bepaalde string bevat in de URI (in de Location header) (https://laravel.com/docs/6.x/http-tests#assert-location)
+    - Check of de response een HTTP 201 is (https://laravel.com/docs/6.x/http-tests#assert-created)
+    - Check dat je een Forbidden response terugkrijgt (https://laravel.com/docs/6.x/http-tests#assert-forbidden)
+    - Check dat de response een bepaalde status code heeft (https://laravel.com/docs/6.x/http-tests#assert-status)
+    - Check dat de response een bepaalde status code heeft en geen content (https://laravel.com/docs/6.x/http-tests#assert-no-content)
+    - Check dat de response een Not Found status code heeft (https://laravel.com/docs/6.x/http-tests#assert-not-found)
+    - Check dat je een 401 terugkrijgt (https://laravel.com/docs/6.x/http-tests#assert-unauthorized)
+    - CHeck of je een 200 OK status terug krijgt (https://laravel.com/docs/6.x/http-tests#assert-ok)
+    - Check of je een success status code (tussen 200 en 300) terugkrijgt (https://laravel.com/docs/6.x/http-tests#assert-successful)
+    - Check dat de response een niet-encrypted cookie bevat (https://laravel.com/docs/6.x/http-tests#assert-plain-cookie)
+    - Check dat de response een redirect is naar een bepaalde URI (https://laravel.com/docs/6.x/http-tests#assert-redirect)
+    - Check dat de sessie een bepaalde waarde heeft (https://laravel.com/docs/6.x/http-tests#assert-session-has-input, https://laravel.com/docs/6.x/http-tests#assert-session-has-all, https://laravel.com/docs/6.x/http-tests#assert-session-missing)
+    - Check de sessie op bepaalde error keys (https://laravel.com/docs/6.x/http-tests#assert-session-has-errors, https://laravel.com/docs/6.x/http-tests#assert-session-has-errors-in, https://laravel.com/docs/6.x/http-tests#assert-session-has-no-errors, https://laravel.com/docs/6.x/http-tests#assert-session-doesnt-have-errors)
+    - Check dat de view bepaalde data gekregen heeft (https://laravel.com/docs/6.x/http-tests#assert-view-has, https://laravel.com/docs/6.x/http-tests#assert-view-has-all)
+    - Check dat een bepaalde view is teruggegeven door een route (https://laravel.com/docs/6.x/http-tests#assert-view-is, https://laravel.com/docs/6.x/http-tests#assert-view-missing)
+    - Check authorisatie dingen (https://laravel.com/docs/6.x/http-tests#authentication-assertions)
+- Browser testing (Dusk) (https://laravel.com/docs/6.x/dusk)
+    - Installatie (https://laravel.com/docs/6.x/dusk#installation)
+    - Een test genereren (https://laravel.com/docs/6.x/dusk#generating-tests)
+    - Tests draaien (https://laravel.com/docs/6.x/dusk#running-tests)
+    - .env Bestand speciaal voor Dusk (https://laravel.com/docs/6.x/dusk#environment-handling)
+    - Browser(s) maken (https://laravel.com/docs/6.x/dusk#creating-browsers)
+    - Browser macro maken (https://laravel.com/docs/6.x/dusk#browser-macros)
+    - Inloggen (https://laravel.com/docs/6.x/dusk#authentication)
+    - Database migraties draaien van tevoren (https://laravel.com/docs/6.x/dusk#migrations)
+    - Interacties
+        - Speciale Dusk selectors toevoegen aan je HTML (https://laravel.com/docs/6.x/dusk#dusk-selectors)
+        - Op een link klikken (https://laravel.com/docs/6.x/dusk#clicking-links)
+        - Waarde ophalen van een element (https://laravel.com/docs/6.x/dusk#text-values-and-attributes)
+        - Tekst ophalen van een element (https://laravel.com/docs/6.x/dusk#text-values-and-attributes)
+        - Attribuut ophalen van een element (https://laravel.com/docs/6.x/dusk#text-values-and-attributes)
+        - Omgaan met formulieren (https://laravel.com/docs/6.x/dusk#using-forms)
+        - Een toetsenbord emuleren (https://laravel.com/docs/6.x/dusk#using-the-keyboard)
+        - Een muis emuleren (https://laravel.com/docs/6.x/dusk#using-the-mouse)
+        - Javascript dialoogschermen (https://laravel.com/docs/6.x/dusk#javascript-dialogs)
+        - Meerdere acties op dezelfde scope doen (https://laravel.com/docs/6.x/dusk#scoping-selectors)
+        - Wachten op dingen op de pagina (https://laravel.com/docs/6.x/dusk#waiting-for-elements)
+    - Assertions (https://laravel.com/docs/6.x/dusk#available-assertions)
+        - Voor de title (https://laravel.com/docs/6.x/dusk#assert-title, https://laravel.com/docs/6.x/dusk#assert-title-contains)
+        - Voor de huidige URL (https://laravel.com/docs/6.x/dusk#assert-url-is)
+        - Voor het huidige URL pad (https://laravel.com/docs/6.x/dusk#assert-path-begins-with, https://laravel.com/docs/6.x/dusk#assert-path-is, https://laravel.com/docs/6.x/dusk#assert-path-is-not)
+        - Voor een route (https://laravel.com/docs/6.x/dusk#assert-route-is)
+        - Voor de query string (https://laravel.com/docs/6.x/dusk#assert-query-string-has, https://laravel.com/docs/6.x/dusk#assert-query-string-missing)
+        - Voor het huidige scheme (https://laravel.com/docs/6.x/dusk#assert-scheme-is, https://laravel.com/docs/6.x/dusk#assert-scheme-is-not)
+        - Voor de URL host (https://laravel.com/docs/6.x/dusk#assert-host-is, https://laravel.com/docs/6.x/dusk#assert-host-is-not)
+        - Voor de port (https://laravel.com/docs/6.x/dusk#assert-port-is, https://laravel.com/docs/6.x/dusk#assert-port-is-not)
+        - Voor cookies (https://laravel.com/docs/6.x/dusk#assert-has-cookie, https://laravel.com/docs/6.x/dusk#assert-cookie-missing, https://laravel.com/docs/6.x/dusk#assert-cookie-value, https://laravel.com/docs/6.x/dusk#assert-plain-cookie-value)
+        - Voor teksten op de pagina (https://laravel.com/docs/6.x/dusk#assert-see, https://laravel.com/docs/6.x/dusk#assert-dont-see, https://laravel.com/docs/6.x/dusk#assert-see-in, https://laravel.com/docs/6.x/dusk#assert-dont-see-in)
+        - Voor de broncode (https://laravel.com/docs/6.x/dusk#assert-source-has, https://laravel.com/docs/6.x/dusk#assert-source-missing)
+        - Voor links (https://laravel.com/docs/6.x/dusk#assert-see-link, https://laravel.com/docs/6.x/dusk#assert-dont-see-link)
+        - Voor invoervelden (https://laravel.com/docs/6.x/dusk#assert-input-value, https://laravel.com/docs/6.x/dusk#assert-input-value-is-not)
+        - Voor checkboxes (https://laravel.com/docs/6.x/dusk#assert-checked, https://laravel.com/docs/6.x/dusk#assert-not-checked)
+        - Voor radio velden (https://laravel.com/docs/6.x/dusk#assert-radio-selected, https://laravel.com/docs/6.x/dusk#assert-radio-not-selected)
+        - Voor dropdowns (https://laravel.com/docs/6.x/dusk#assert-selected, https://laravel.com/docs/6.x/dusk#assert-not-selected, https://laravel.com/docs/6.x/dusk#assert-select-has-options, https://laravel.com/docs/6.x/dusk#assert-select-missing-options, https://laravel.com/docs/6.x/dusk#assert-select-has-option)
+        - Voor waardes (https://laravel.com/docs/6.x/dusk#assert-value)
+        - Voor Visibility (https://laravel.com/docs/6.x/dusk#assert-visible)
+        - Element aanwezigheid (https://laravel.com/docs/6.x/dusk#assert-present, https://laravel.com/docs/6.x/dusk#assert-missing)
+        - Voor dialoogvensters (https://laravel.com/docs/6.x/dusk#assert-dialog-opened)
+        - Enabled/disabled velden (https://laravel.com/docs/6.x/dusk#assert-enabled, https://laravel.com/docs/6.x/dusk#assert-disabled)
+        - Buttons (https://laravel.com/docs/6.x/dusk#assert-button-enabled, https://laravel.com/docs/6.x/dusk#assert-button-disabled)
+        - Focus (https://laravel.com/docs/6.x/dusk#assert-focused, https://laravel.com/docs/6.x/dusk#assert-not-focused)
+    - Page objecten die specifieke pagina's beschrijven (https://laravel.com/docs/6.x/dusk#pages)
+        - Genereren (https://laravel.com/docs/6.x/dusk#generating-pages)
+        - Configureren (https://laravel.com/docs/6.x/dusk#configuring-pages)
+        - Naar een Page pagina toe gaan / deze inladen in een test (https://laravel.com/docs/6.x/dusk#navigating-to-pages)
+        - Shortcuts aanmaken voor selectors (https://laravel.com/docs/6.x/dusk#shorthand-selectors)
+        - Handelingen definiëren als method (https://laravel.com/docs/6.x/dusk#page-methods)
+    - Componenten die veelgebruikte onderdelen op je pagina's (bijvoorbeeld een navbar) beschrijven (https://laravel.com/docs/6.x/dusk#components)
+        - Genereren (https://laravel.com/docs/6.x/dusk#generating-components)
+        - Gebruiken (https://laravel.com/docs/6.x/dusk#using-components)
+    - Draaien op Github Actions (vergelijkbaar met Bitbucket Pipelines) (https://laravel.com/docs/6.x/dusk#running-tests-on-github-actions)
+- Database (https://laravel.com/docs/6.x/database-testing)
+    - Checken of bepaalde data aanwezig is (https://laravel.com/docs/6.x/database-testing#introduction)
+    - Database resetten (migraties opnieuw draaien) na elke test (https://laravel.com/docs/6.x/database-testing#resetting-the-database-after-each-test)
+    - Factories
+        - Factories genereren (https://laravel.com/docs/6.x/database-testing#generating-factories)
+        - Factories schrijven (https://laravel.com/docs/6.x/database-testing#writing-factories)
+        - Factories extenden (https://laravel.com/docs/6.x/database-testing#extending-factories)
+        - Een factory state maken, waarmee je bepaalde data van een factory kan wijzigen. Bijvoorbeeld een 'bejaard' state waarmee je een user 65+ maakt (https://laravel.com/docs/6.x/database-testing#factory-states)
+        - Hooks/callbacks voor en nadat een factory een model gemaakt heeft (https://laravel.com/docs/6.x/database-testing#factory-callbacks)
+        - Gebruiken (https://laravel.com/docs/6.x/database-testing#using-factories)
+            - Models aanmaken (https://laravel.com/docs/6.x/database-testing#creating-models)
+            - Models persisten naar de database (https://laravel.com/docs/6.x/database-testing#persisting-models)
+            - Relaties toevoegen aan models (https://laravel.com/docs/6.x/database-testing#relationships)
+    - Seeds (https://laravel.com/docs/6.x/database-testing#using-seeds)
+    - Extra assertions (https://laravel.com/docs/6.x/database-testing#available-assertions)
+- Mocking/Faking (https://laravel.com/docs/6.x/mocking)
+    - Een object mocken voor de Service Container (https://laravel.com/docs/6.x/mocking#mocking-objects)
+    - Een job mocken/afvangen (https://laravel.com/docs/6.x/mocking#bus-fake)
+    - Een event mocken/afvangen (https://laravel.com/docs/6.x/mocking#event-fake)
+    - Een mail mocken/afvangen (https://laravel.com/docs/6.x/mocking#mail-fake)
+    - Een notificatie mocken/afvangen (https://laravel.com/docs/6.x/mocking#notification-fake)
+    - Een queue mocken/afvangen (https://laravel.com/docs/6.x/mocking#queue-fake)
+    - Een storage mocken/afvangen (https://laravel.com/docs/6.x/mocking#storage-fake)
+    - Een facade mocken (https://laravel.com/docs/6.x/mocking#mocking-facades)

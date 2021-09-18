@@ -1,19 +1,10 @@
 # Sessions
-## Configuration
-### Official documentation
-https://laravel.com/docs/6.x/session#configuration
-## Storing Data
-### Official documentation
-https://laravel.com/docs/6.x/session#storing-data
-## Retrieving Data
-### Official documentation
-https://laravel.com/docs/6.x/session#retrieving-data
-## Deleting Data
-### Official documentation
-https://laravel.com/docs/6.x/session#deleting-data
-## Flash Data
-### Official documentation
-https://laravel.com/docs/6.x/session#flash-data
-## Custom Drivers
-### Official documentation
-https://laravel.com/docs/6.x/session#adding-custom-session-drivers
+- Configuratie (https://laravel.com/docs/6.x/session#configuration)
+- Benodigdheden (https://laravel.com/docs/6.x/session#driver-prerequisites)
+- Sessiedata ophalen (https://laravel.com/docs/6.x/session#retrieving-data)
+- Sessiedata opslaan (https://laravel.com/docs/6.x/session#storing-data)
+- Sessiedata ophalen en verwijderen (https://laravel.com/docs/6.x/session#storing-data)
+- Flash data (bestaat t/m de volgende request) (https://laravel.com/docs/6.x/session#flash-data)
+- Data uit de sessie verwijderen (https://laravel.com/docs/6.x/session#deleting-data)
+- Sessie ID vernieuwen (https://laravel.com/docs/6.x/session#regenerating-the-session-id)
+- Custom sessie driver (https://laravel.com/docs/6.x/session#adding-custom-session-drivers)
